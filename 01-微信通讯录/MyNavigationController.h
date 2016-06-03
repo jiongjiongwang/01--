@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyNavigationController.h
 //  01-微信通讯录
 //
 //  Created by 王炯 on 16/6/3.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MyNavigationController : UINavigationController
 
 @end
-

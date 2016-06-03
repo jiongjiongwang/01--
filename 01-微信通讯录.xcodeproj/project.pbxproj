@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		4C56D91E1D01A03900965EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56D91D1D01A03900965EAB /* main.m */; };
 		4C56D9211D01A03900965EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56D9201D01A03900965EAB /* AppDelegate.m */; };
-		4C56D9241D01A03900965EAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56D9231D01A03900965EAB /* ViewController.m */; };
-		4C56D9271D01A03900965EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D9251D01A03900965EAB /* Main.storyboard */; };
 		4C56D9291D01A03900965EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D9281D01A03900965EAB /* Assets.xcassets */; };
 		4C56D92C1D01A03900965EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D92A1D01A03900965EAB /* LaunchScreen.storyboard */; };
+		4C56D9711D01AF4300965EAB /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56D9701D01AF4300965EAB /* MyTabBarController.m */; };
+		4C56D9741D01B10800965EAB /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56D9731D01B10800965EAB /* MyNavigationController.m */; };
+		4C56D9761D01B18900965EAB /* Rencent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D9751D01B18900965EAB /* Rencent.storyboard */; };
+		4C56D9781D01B1A500965EAB /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D9771D01B1A500965EAB /* Contact.storyboard */; };
+		4C56D97A1D01B1B300965EAB /* Keybord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D9791D01B1B300965EAB /* Keybord.storyboard */; };
+		4C56D97C1D01B1C000965EAB /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D97B1D01B1C000965EAB /* Setting.storyboard */; };
+		4C56D97F1D01B44C00965EAB /* RecentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56D97E1D01B44C00965EAB /* RecentController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +25,19 @@
 		4C56D91D1D01A03900965EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C56D91F1D01A03900965EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C56D9201D01A03900965EAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4C56D9221D01A03900965EAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C56D9231D01A03900965EAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4C56D9261D01A03900965EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C56D9281D01A03900965EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C56D92B1D01A03900965EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C56D92D1D01A03900965EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C56D96F1D01AF4300965EAB /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
+		4C56D9701D01AF4300965EAB /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
+		4C56D9721D01B10800965EAB /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		4C56D9731D01B10800965EAB /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		4C56D9751D01B18900965EAB /* Rencent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Rencent.storyboard; sourceTree = "<group>"; };
+		4C56D9771D01B1A500965EAB /* Contact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contact.storyboard; sourceTree = "<group>"; };
+		4C56D9791D01B1B300965EAB /* Keybord.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Keybord.storyboard; sourceTree = "<group>"; };
+		4C56D97B1D01B1C000965EAB /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		4C56D97D1D01B44C00965EAB /* RecentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentController.h; sourceTree = "<group>"; };
+		4C56D97E1D01B44C00965EAB /* RecentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +70,11 @@
 		4C56D91B1D01A03900965EAB /* 01-微信通讯录 */ = {
 			isa = PBXGroup;
 			children = (
-				4C56D91F1D01A03900965EAB /* AppDelegate.h */,
-				4C56D9201D01A03900965EAB /* AppDelegate.m */,
-				4C56D9221D01A03900965EAB /* ViewController.h */,
-				4C56D9231D01A03900965EAB /* ViewController.m */,
-				4C56D9251D01A03900965EAB /* Main.storyboard */,
-				4C56D9281D01A03900965EAB /* Assets.xcassets */,
-				4C56D92A1D01A03900965EAB /* LaunchScreen.storyboard */,
-				4C56D92D1D01A03900965EAB /* Info.plist */,
+				4C56D95E1D01AC6D00965EAB /* 00-主界面 */,
+				4C56D95C1D01AC4100965EAB /* 04-设置 */,
+				4C56D95B1D01AC2E00965EAB /* 03-通话键盘 */,
+				4C56D95A1D01AC2000965EAB /* 02-通讯录 */,
+				4C56D9591D01AC0800965EAB /* 01-通话记录 */,
 				4C56D91C1D01A03900965EAB /* Supporting Files */,
 			);
 			path = "01-微信通讯录";
@@ -74,9 +83,187 @@
 		4C56D91C1D01A03900965EAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C56D9281D01A03900965EAB /* Assets.xcassets */,
+				4C56D92A1D01A03900965EAB /* LaunchScreen.storyboard */,
+				4C56D92D1D01A03900965EAB /* Info.plist */,
 				4C56D91D1D01A03900965EAB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C56D9591D01AC0800965EAB /* 01-通话记录 */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D9611D01AC9700965EAB /* Controller */,
+				4C56D9601D01AC9000965EAB /* View */,
+				4C56D95F1D01AC8900965EAB /* Model */,
+			);
+			name = "01-通话记录";
+			sourceTree = "<group>";
+		};
+		4C56D95A1D01AC2000965EAB /* 02-通讯录 */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D9641D01ACB300965EAB /* Controller */,
+				4C56D9631D01ACAE00965EAB /* View */,
+				4C56D9621D01ACA600965EAB /* Model */,
+			);
+			name = "02-通讯录";
+			sourceTree = "<group>";
+		};
+		4C56D95B1D01AC2E00965EAB /* 03-通话键盘 */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D9671D01ACCE00965EAB /* Controller */,
+				4C56D9661D01ACC700965EAB /* VIew */,
+				4C56D9651D01ACC000965EAB /* Model */,
+			);
+			name = "03-通话键盘";
+			sourceTree = "<group>";
+		};
+		4C56D95C1D01AC4100965EAB /* 04-设置 */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D96A1D01ACE900965EAB /* Controller */,
+				4C56D9691D01ACE300965EAB /* View */,
+				4C56D9681D01ACD900965EAB /* Model */,
+			);
+			name = "04-设置";
+			sourceTree = "<group>";
+		};
+		4C56D95E1D01AC6D00965EAB /* 00-主界面 */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D96E1D01AD5E00965EAB /* Controller */,
+				4C56D96D1D01AD5900965EAB /* View */,
+				4C56D96C1D01AD5300965EAB /* Model */,
+				4C56D96B1D01AD4C00965EAB /* Other */,
+			);
+			name = "00-主界面";
+			sourceTree = "<group>";
+		};
+		4C56D95F1D01AC8900965EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C56D9601D01AC9000965EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4C56D9611D01AC9700965EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D9751D01B18900965EAB /* Rencent.storyboard */,
+				4C56D97D1D01B44C00965EAB /* RecentController.h */,
+				4C56D97E1D01B44C00965EAB /* RecentController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C56D9621D01ACA600965EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C56D9631D01ACAE00965EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4C56D9641D01ACB300965EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D9771D01B1A500965EAB /* Contact.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C56D9651D01ACC000965EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C56D9661D01ACC700965EAB /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
+		4C56D9671D01ACCE00965EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D9791D01B1B300965EAB /* Keybord.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C56D9681D01ACD900965EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C56D9691D01ACE300965EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4C56D96A1D01ACE900965EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D97B1D01B1C000965EAB /* Setting.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C56D96B1D01AD4C00965EAB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D91F1D01A03900965EAB /* AppDelegate.h */,
+				4C56D9201D01A03900965EAB /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		4C56D96C1D01AD5300965EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C56D96D1D01AD5900965EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4C56D96E1D01AD5E00965EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C56D96F1D01AF4300965EAB /* MyTabBarController.h */,
+				4C56D9701D01AF4300965EAB /* MyTabBarController.m */,
+				4C56D9721D01B10800965EAB /* MyNavigationController.h */,
+				4C56D9731D01B10800965EAB /* MyNavigationController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +324,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C56D97A1D01B1B300965EAB /* Keybord.storyboard in Resources */,
+				4C56D9761D01B18900965EAB /* Rencent.storyboard in Resources */,
+				4C56D9781D01B1A500965EAB /* Contact.storyboard in Resources */,
 				4C56D92C1D01A03900965EAB /* LaunchScreen.storyboard in Resources */,
 				4C56D9291D01A03900965EAB /* Assets.xcassets in Resources */,
-				4C56D9271D01A03900965EAB /* Main.storyboard in Resources */,
+				4C56D97C1D01B1C000965EAB /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,23 +340,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C56D9241D01A03900965EAB /* ViewController.m in Sources */,
 				4C56D9211D01A03900965EAB /* AppDelegate.m in Sources */,
+				4C56D9741D01B10800965EAB /* MyNavigationController.m in Sources */,
 				4C56D91E1D01A03900965EAB /* main.m in Sources */,
+				4C56D9711D01AF4300965EAB /* MyTabBarController.m in Sources */,
+				4C56D97F1D01B44C00965EAB /* RecentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4C56D9251D01A03900965EAB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C56D9261D01A03900965EAB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C56D92A1D01A03900965EAB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
