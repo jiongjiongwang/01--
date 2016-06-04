@@ -23,6 +23,9 @@
 
 @implementation RecentController
 
+static NSString *identify = @"RecentCell";
+
+
 -(NSArray *)dataArray
 {
     if (_dataArray == nil)
@@ -53,6 +56,13 @@
     
     [super viewDidLoad];
     
+    UINib *nib = [UINib nibWithNibName:@"RecentCell" bundle:nil];
+    
+    
+    [self.tableView registerNib:nib forCellReuseIdentifier:identify];
+    
+    self.tableView.rowHeight = 60;
+    
     
 }
 
@@ -75,5 +85,14 @@
     return self.dataArray.count;
 }
 //(3)行内容
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RecentTabelCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    
+    cell.model = self.dataArray[indexPath.row];
+    
+    
+    return cell;
+}
 
 @end

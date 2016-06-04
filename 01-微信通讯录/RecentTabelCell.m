@@ -7,6 +7,7 @@
 //
 
 #import "RecentTabelCell.h"
+#import "RendentModel.h"
 
 
 @interface RecentTabelCell()
@@ -38,5 +39,19 @@
 {
     [super setSelected:selected animated:animated];
 }
+
+-(void)setModel:(RendentModel *)model
+{
+    _model = model;
+    
+    _nameLabel.text = model.name;
+    
+    _cityLabel.text = model.city;
+    
+    _timeLabel.text = model.time;
+    
+    _acceoryImage.image = [UIImage imageNamed:model.accessoryType];
+}
+
 
 @end

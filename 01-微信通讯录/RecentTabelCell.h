@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RendentModel;
 
 @interface RecentTabelCell : UITableViewCell
+
+@property (nonatomic,strong)RendentModel *model;
+
 
 @end
