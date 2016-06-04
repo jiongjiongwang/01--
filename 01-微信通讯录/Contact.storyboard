@@ -30,6 +30,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ljB-4V-Fjo">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="选择" id="WfR-rm-0nd"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="fXq-dg-xWV">
                             <rect key="frame" x="216" y="7" width="168" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,11 +39,53 @@
                                 <segment title="全部"/>
                             </segments>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" image="icon_contact_add" id="LHr-8o-vl2">
+                            <connections>
+                                <segue destination="sbU-K0-pke" kind="push" identifier="AddContact" id="rg3-uc-POL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4o1-lf-ilt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704" y="385"/>
+        </scene>
+        <!--添加联系人-->
+        <scene sceneID="bRV-Ny-ZYp">
+            <objects>
+                <viewController id="sbU-K0-pke" customClass="AddContactController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VdM-e4-IM6"/>
+                        <viewControllerLayoutGuide type="bottom" id="EpK-PB-rpx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gXT-n8-a6H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加联系人" id="yGP-11-Izl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1KX-SC-Mtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="159"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jQt-TA-8Vt">
+            <objects>
+                <viewController id="sDd-Il-W6n" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="epa-Q1-q5G"/>
+                        <viewControllerLayoutGuide type="bottom" id="OHJ-NT-CQp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mzf-fi-YaJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB9-zp-LDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="938"/>
         </scene>
         <!--My Navigation Controller-->
         <scene sceneID="j4Y-ko-GEB">
@@ -61,4 +104,7 @@
             <point key="canvasLocation" x="-116" y="385"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_contact_add" width="21" height="20"/>
+    </resources>
 </document>
