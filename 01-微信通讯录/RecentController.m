@@ -7,12 +7,43 @@
 //
 
 #import "RecentController.h"
+#import "RendentModel.h"
+
 
 @interface RecentController ()
+
+@property (nonatomic,strong)NSArray *dataArray;
+
+
 
 @end
 
 @implementation RecentController
+
+-(NSArray *)dataArray
+{
+    if (_dataArray == nil)
+    {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"callRecords.plist" ofType:nil];
+        
+        NSArray *tempArray = [NSArray arrayWithContentsOfFile:path];
+        
+        NSMutableArray *mutableArr = [NSMutableArray array];
+        
+        for (NSDictionary *dict in tempArray)
+        {
+            RendentModel *rencentModel = [RendentModel RencentModelWithDict:dict];
+            
+            [mutableArr addObject:rencentModel];
+        }
+        
+        _dataArray = mutableArr;
+        
+    }
+    return _dataArray;
+}
+
+
 
 - (void)viewDidLoad
 {

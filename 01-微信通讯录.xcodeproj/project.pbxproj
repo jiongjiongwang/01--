@@ -18,6 +18,7 @@
 		4C56D97A1D01B1B300965EAB /* Keybord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D9791D01B1B300965EAB /* Keybord.storyboard */; };
 		4C56D97C1D01B1C000965EAB /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C56D97B1D01B1C000965EAB /* Setting.storyboard */; };
 		4C56D97F1D01B44C00965EAB /* RecentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56D97E1D01B44C00965EAB /* RecentController.m */; };
+		4C7C364C1D0284D70033A77C /* RendentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7C364B1D0284D70033A77C /* RendentModel.m */; };
 		4CF785FE1D0262A500EA8522 /* ContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF785FD1D0262A500EA8522 /* ContactController.m */; };
 		4CF786011D0263EC00EA8522 /* KeybordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF786001D0263EC00EA8522 /* KeybordController.m */; };
 		4CF786041D02644F00EA8522 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF786031D02644F00EA8522 /* SettingController.m */; };
@@ -42,6 +43,8 @@
 		4C56D97B1D01B1C000965EAB /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		4C56D97D1D01B44C00965EAB /* RecentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentController.h; sourceTree = "<group>"; };
 		4C56D97E1D01B44C00965EAB /* RecentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentController.m; sourceTree = "<group>"; };
+		4C7C364A1D0284D70033A77C /* RendentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendentModel.h; sourceTree = "<group>"; };
+		4C7C364B1D0284D70033A77C /* RendentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RendentModel.m; sourceTree = "<group>"; };
 		4CF785FC1D0262A500EA8522 /* ContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactController.h; sourceTree = "<group>"; };
 		4CF785FD1D0262A500EA8522 /* ContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactController.m; sourceTree = "<group>"; };
 		4CF785FF1D0263EC00EA8522 /* KeybordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeybordController.h; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 		4C56D95F1D01AC8900965EAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C7C364A1D0284D70033A77C /* RendentModel.h */,
+				4C7C364B1D0284D70033A77C /* RendentModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				4CF785FE1D0262A500EA8522 /* ContactController.m in Sources */,
 				4C56D91E1D01A03900965EAB /* main.m in Sources */,
 				4C56D9711D01AF4300965EAB /* MyTabBarController.m in Sources */,
+				4C7C364C1D0284D70033A77C /* RendentModel.m in Sources */,
 				4C56D97F1D01B44C00965EAB /* RecentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
