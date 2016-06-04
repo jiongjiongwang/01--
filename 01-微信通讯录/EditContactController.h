@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContactModel.h"
+
 
 @interface EditContactController : UIViewController
+
+//用于接收传递过来的数据
+@property (nonatomic,strong)ContactModel *model;
+
+@property (nonatomic,copy)dispatch_block_t editBlock;
+
 
 @end

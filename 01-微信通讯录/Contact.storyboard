@@ -143,6 +143,9 @@
                                     <constraint firstAttribute="width" constant="221" id="vs2-jX-wTR"/>
                                 </constraints>
                                 <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="SaveContact:" destination="sDd-Il-W6n" eventType="touchUpInside" id="xFe-4k-RTg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

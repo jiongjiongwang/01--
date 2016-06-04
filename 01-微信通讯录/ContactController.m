@@ -10,6 +10,8 @@
 #import "AddContactDelegate.h"
 #import "AddContactController.h"
 #import "ContactModel.h"
+#import "EditContactController.h"
+
 
 
 
@@ -140,7 +142,22 @@ static NSString *identify = @"ContactCell";
     }
     else if([segueIndentify isEqualToString:@"EditContact"])
     {
+        EditContactController *editVC = (EditContactController *)segue.destinationViewController;
         
+        editVC.model = sender;
+        
+        editVC.editBlock = ^(){
+            
+            
+            //(1)数据重新归档
+            [NSKeyedArchiver archiveRootObject:self.dataArray toFile:kFilePath(@"a.data")];
+            
+            //(2)刷新数据
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            
+            
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        };
     }
 }
 
