@@ -8,6 +8,9 @@
 
 #import "RecentController.h"
 #import "RendentModel.h"
+#import "RecentTabelCell.h"
+
+
 
 
 @interface RecentController ()
@@ -58,17 +61,19 @@
     [super didReceiveMemoryWarning];
 }
 
-
-
+//数据源方法
+//(1)组
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
-    return 0;
+    return 1;
 }
-
+//(2)行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return 0;
+    return self.dataArray.count;
 }
+//(3)行内容
+
 @end
