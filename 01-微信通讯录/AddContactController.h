@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddContactDelegate.h"
+
 
 @interface AddContactController : UIViewController
+
+@property (nonatomic,weak)id<AddContactDelegate>delegate;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "AddContactController.h"
+#import "ContactModel.h"
+
 
 @interface AddContactController ()
 
@@ -66,8 +68,21 @@
 
 - (IBAction)AddContact:(UIButton *)sender
 {
-
-
+    //封装数据
+    ContactModel *model = [[ContactModel alloc] init];
+    
+    model.name = _nameTextFiled.text;
+    
+    model.phoneNum = _phoneTextField.text;
+    
+    //调用代理，传递数据
+    if ([self.delegate respondsToSelector:@selector(AddContactController:withModel:)])
+    {
+        [self.delegate AddContactController:self withModel:model];
+    }
+    
+    //回退到上一页
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

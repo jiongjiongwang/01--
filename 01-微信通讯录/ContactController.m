@@ -7,6 +7,12 @@
 //
 
 #import "ContactController.h"
+#import "AddContactDelegate.h"
+#import "AddContactController.h"
+#import "ContactModel.h"
+
+
+
 
 
 //定义一个宏，用于方便地使用文件路径
@@ -14,7 +20,7 @@
 
 
 
-@interface ContactController ()
+@interface ContactController ()<AddContactDelegate>
 
 
 //定义一个可变数组，用于存放联系人数据
@@ -88,6 +94,11 @@ static NSString *identify = @"ContactCell";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
     }
     
+    ContactModel *model = self.dataArray[indexPath.row];
+    
+    cell.textLabel.text = model.name;
+    cell.detailTextLabel.text = model.phoneNum;
+    
     return cell;
 }
 
@@ -100,10 +111,79 @@ static NSString *identify = @"ContactCell";
 
 }
 
+
+
+
+
 //(4)点击cell的触发事件:跳转到编辑联系人界面
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+
+//当使用segue进行页面跳转时，都会默认执行的方法
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //通过segue的标示符判断是跳转到哪一个界面
+    NSString *segueIndentify = segue.identifier;
+    
+    if ([segueIndentify isEqualToString:@"addContact"])
+    {
+        AddContactController *addVC = (AddContactController *)segue.destinationViewController;
+        
+        addVC.delegate = self;
+    }
+    else if([segueIndentify isEqualToString:@"EditContact"])
+    {
+        
+    }
+}
+
+//实现添加联系人代理方法
+-(void)AddContactController:(AddContactController *)addVC withModel:(ContactModel *)model
+{
+    //(1)将数据添加到可变数组中
+    [self.dataArray addObject:model];
+    
+    //(2)将新添加的数据归档
+    [NSKeyedArchiver archiveRootObject:self.dataArray toFile:kFilePath(@"a.data")];
+    
+    //(3)刷新tableView
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataArray.count-1 inSection:0];
+    
+    
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
+
+}
+
+
+//增加删除数据的功能
+-(void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //当是删除模式的时候
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        //(1)更新dataArray数组
+        [self.dataArray removeObjectAtIndex:indexPath.row];
+        
+        //将dataArray重新归档
+        [NSKeyedArchiver archiveRootObject:self.dataArray toFile:kFilePath(@"a.data")];
+        
+        //(2)刷新数据
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+    }
+}
+//更改删除的字样
+-(NSString *)tableView:(UITableView *)tableView
+titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
 }
 
 
