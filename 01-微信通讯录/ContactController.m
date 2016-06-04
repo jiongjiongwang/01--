@@ -118,7 +118,11 @@ static NSString *identify = @"ContactCell";
 //(4)点击cell的触发事件:跳转到编辑联系人界面
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //跳转到编辑界面，并将数据传入
+    ContactModel *model = self.dataArray[indexPath.row];
     
+    [self performSegueWithIdentifier:@"EditContact" sender:model];
+
 }
 
 

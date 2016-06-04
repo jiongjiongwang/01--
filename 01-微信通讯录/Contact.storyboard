@@ -116,7 +116,7 @@
         <!--编辑联系人-->
         <scene sceneID="jQt-TA-8Vt">
             <objects>
-                <viewController id="sDd-Il-W6n" sceneMemberID="viewController">
+                <viewController id="sDd-Il-W6n" customClass="EditContactController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="epa-Q1-q5G"/>
                         <viewControllerLayoutGuide type="bottom" id="OHJ-NT-CQp"/>
@@ -124,9 +124,51 @@
                     <view key="view" contentMode="scaleToFill" id="Mzf-fi-YaJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="编辑姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kuo-PE-IzD">
+                                <rect key="frame" x="25" y="114" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="编辑号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEJ-8Z-as3">
+                                <rect key="frame" x="25" y="184" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggE-ye-0mh">
+                                <rect key="frame" x="190" y="270" width="221" height="30"/>
+                                <color key="backgroundColor" red="0.059173700853111688" green="1" blue="0.13402355582747583" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gGL-xB-RGE"/>
+                                    <constraint firstAttribute="width" constant="221" id="vs2-jX-wTR"/>
+                                </constraints>
+                                <state key="normal" title="保存"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xEJ-8Z-as3" firstAttribute="top" secondItem="Kuo-PE-IzD" secondAttribute="bottom" constant="40" id="45z-ut-SF3"/>
+                            <constraint firstItem="Kuo-PE-IzD" firstAttribute="top" secondItem="epa-Q1-q5G" secondAttribute="bottom" constant="50" id="5bT-tm-A51"/>
+                            <constraint firstAttribute="trailing" secondItem="xEJ-8Z-as3" secondAttribute="trailing" constant="25" id="HPc-Z8-OyP"/>
+                            <constraint firstItem="xEJ-8Z-as3" firstAttribute="leading" secondItem="Mzf-fi-YaJ" secondAttribute="leading" constant="25" id="Mor-Gj-I2H"/>
+                            <constraint firstItem="ggE-ye-0mh" firstAttribute="centerX" secondItem="Mzf-fi-YaJ" secondAttribute="centerX" id="OMy-m5-gO5"/>
+                            <constraint firstAttribute="trailing" secondItem="Kuo-PE-IzD" secondAttribute="trailing" constant="25" id="aho-Nl-Yka"/>
+                            <constraint firstItem="ggE-ye-0mh" firstAttribute="top" secondItem="xEJ-8Z-as3" secondAttribute="bottom" constant="56" id="sqA-Go-gsQ"/>
+                            <constraint firstItem="Kuo-PE-IzD" firstAttribute="leading" secondItem="Mzf-fi-YaJ" secondAttribute="leading" constant="25" id="tKL-dd-o8C"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="编辑联系人" id="sTu-sx-4ua"/>
+                    <navigationItem key="navigationItem" title="编辑联系人" id="sTu-sx-4ua">
+                        <barButtonItem key="rightBarButtonItem" title="编辑" id="iOJ-g6-bjE">
+                            <connections>
+                                <action selector="EditContact:" destination="sDd-Il-W6n" id="zwD-DC-a4w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="Kuo-PE-IzD" id="Ukm-dI-gDb"/>
+                        <outlet property="phoneNumTextField" destination="xEJ-8Z-as3" id="Ih5-kf-jjy"/>
+                        <outlet property="saveButton" destination="ggE-ye-0mh" id="jRx-Wx-nDR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GB9-zp-LDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
