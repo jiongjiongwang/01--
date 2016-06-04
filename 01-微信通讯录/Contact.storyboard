@@ -41,10 +41,14 @@
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" image="icon_contact_add" id="LHr-8o-vl2">
                             <connections>
-                                <segue destination="sbU-K0-pke" kind="push" identifier="AddContact" id="rg3-uc-POL"/>
+                                <action selector="addContact:" destination="Qn6-kZ-0jX" id="ZEt-Ot-7ch"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="sbU-K0-pke" kind="push" identifier="addContact" id="kH0-v7-iwk"/>
+                        <segue destination="sDd-Il-W6n" kind="push" identifier="EditContact" id="00m-JB-RhG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4o1-lf-ilt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,15 +65,55 @@
                     <view key="view" contentMode="scaleToFill" id="gXT-n8-a6H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="联系人姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="421-g4-snN">
+                                <rect key="frame" x="25" y="114" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="联系人号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEw-km-F7P">
+                                <rect key="frame" x="25" y="184" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-dO-SL9">
+                                <rect key="frame" x="190" y="270" width="221" height="30"/>
+                                <color key="backgroundColor" red="0.42355513795095623" green="1" blue="0.077514321316428991" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A7X-Q5-m3Q"/>
+                                    <constraint firstAttribute="width" constant="221" id="gjO-rY-h2O"/>
+                                </constraints>
+                                <state key="normal" title="添加"/>
+                                <connections>
+                                    <action selector="AddContact:" destination="sbU-K0-pke" eventType="touchUpInside" id="hhY-TD-nhJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="421-g4-snN" secondAttribute="trailing" constant="25" id="8Ih-ks-At6"/>
+                            <constraint firstItem="421-g4-snN" firstAttribute="leading" secondItem="gXT-n8-a6H" secondAttribute="leading" constant="25" id="FQK-yl-7PD"/>
+                            <constraint firstAttribute="trailing" secondItem="NEw-km-F7P" secondAttribute="trailing" constant="25" id="JKM-Gb-Iv8"/>
+                            <constraint firstItem="gfW-dO-SL9" firstAttribute="top" secondItem="NEw-km-F7P" secondAttribute="bottom" constant="56" id="Tj1-9O-Eae"/>
+                            <constraint firstItem="NEw-km-F7P" firstAttribute="top" secondItem="421-g4-snN" secondAttribute="bottom" constant="40" id="bDE-b3-jFG"/>
+                            <constraint firstItem="NEw-km-F7P" firstAttribute="leading" secondItem="gXT-n8-a6H" secondAttribute="leading" constant="25" id="dL3-lt-nTY"/>
+                            <constraint firstItem="gfW-dO-SL9" firstAttribute="centerX" secondItem="gXT-n8-a6H" secondAttribute="centerX" id="dMz-Zp-BN4"/>
+                            <constraint firstItem="421-g4-snN" firstAttribute="top" secondItem="VdM-e4-IM6" secondAttribute="bottom" constant="50" id="ud1-lY-IHw"/>
+                            <constraint firstItem="421-g4-snN" firstAttribute="centerX" secondItem="gXT-n8-a6H" secondAttribute="centerX" id="wxF-2z-yRR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="添加联系人" id="yGP-11-Izl"/>
+                    <connections>
+                        <outlet property="addButton" destination="gfW-dO-SL9" id="BLP-vQ-55M"/>
+                        <outlet property="nameTextFiled" destination="421-g4-snN" id="bEx-yC-cuZ"/>
+                        <outlet property="phoneTextField" destination="NEw-km-F7P" id="4AJ-be-h5V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KX-SC-Mtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1387" y="159"/>
         </scene>
-        <!--View Controller-->
+        <!--编辑联系人-->
         <scene sceneID="jQt-TA-8Vt">
             <objects>
                 <viewController id="sDd-Il-W6n" sceneMemberID="viewController">
@@ -82,6 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="编辑联系人" id="sTu-sx-4ua"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GB9-zp-LDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

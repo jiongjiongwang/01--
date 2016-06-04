@@ -92,5 +92,20 @@ static NSString *identify = @"ContactCell";
 }
 
 
+//添加联系人按钮
+- (IBAction)addContact:(UIBarButtonItem *)sender
+{
+    //跳转到添加按钮界面
+    [self performSegueWithIdentifier:@"addContact" sender:nil];
+
+}
+
+//(4)点击cell的触发事件:跳转到编辑联系人界面
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+
 
 @end
