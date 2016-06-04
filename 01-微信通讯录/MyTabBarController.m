@@ -30,16 +30,55 @@
     //(1)Recent
     UINavigationController *nav1 = [self storyBoardName:@"Rencent"];
     
+    //设置底部tabBar的显示信息
+    nav1.title = @"通话记录";
+
+    nav1.tabBarItem.image = [UIImage imageNamed:@"icon_tab_calllog"];
+    
+    nav1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_tab_calllog_selected"];
+    
+    
     
     //(2)Contact
     UINavigationController *nav2 = [self storyBoardName:@"Contact"];
+    
+    //设置底部tabBar的显示信息
+    nav2.title = @"联系人";
+    
+    nav2.tabBarItem.image = [UIImage imageNamed:@"icon_tab_contact"];
+    
+    nav2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_tab_contact_selected"];
+    
+    
     
     
     //(3)Keyboard
     UINavigationController *nav3 = [self storyBoardName:@"Keybord"];
     
+    //设置底部tabBar的显示信息
+    nav3.title = @"拨号";
+    
+    nav3.tabBarItem.image = [UIImage imageNamed:@"icon_tab_Dial"];
+    
+    nav3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_tab_Dia_selectedl"];
+
+    
+    
+    
+    
     //(4)Setting
     UINavigationController *nav4 = [self storyBoardName:@"Setting"];
+    
+    
+    
+    //设置底部tabBar的显示信息
+    nav4.title = @"设置";
+    
+    nav4.tabBarItem.image = [UIImage imageNamed:@"icon_tab_setting"];
+    
+    nav4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_tab_setting_selected"];
+
+    
     
     
     
