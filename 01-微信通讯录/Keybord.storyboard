@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-677" y="280"/>
         </scene>
-        <!--View Controller-->
+        <!--拨号-->
         <scene sceneID="1d2-st-rot">
             <objects>
-                <viewController id="gL0-GC-w5E" sceneMemberID="viewController">
+                <viewController id="gL0-GC-w5E" customClass="KeybordController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bz6-YW-GyS"/>
                         <viewControllerLayoutGuide type="bottom" id="hLx-S4-Nnp"/>
@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jTc-oj-WQG"/>
+                    <navigationItem key="navigationItem" title="拨号" id="jTc-oj-WQG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMQ-Aa-wgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

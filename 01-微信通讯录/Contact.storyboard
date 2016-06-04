@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Contact Controller-->
         <scene sceneID="Yv4-rw-chu">
             <objects>
-                <tableViewController id="Qn6-kZ-0jX" sceneMemberID="viewController">
+                <tableViewController id="Qn6-kZ-0jX" customClass="ContactController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nW0-MJ-xF3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,17 @@
                             <outlet property="delegate" destination="Qn6-kZ-0jX" id="Nrw-do-L8s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ljB-4V-Fjo"/>
+                    <navigationItem key="navigationItem" id="ljB-4V-Fjo">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="fXq-dg-xWV">
+                            <rect key="frame" x="216" y="7" width="168" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="免费"/>
+                                <segment title="全部"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4o1-lf-ilt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

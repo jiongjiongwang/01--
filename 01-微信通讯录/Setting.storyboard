@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--设置-->
         <scene sceneID="p6V-rB-BAr">
             <objects>
-                <tableViewController id="c6l-Oy-eSU" sceneMemberID="viewController">
+                <tableViewController id="c6l-Oy-eSU" customClass="SettingController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IAd-Dk-UmS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="c6l-Oy-eSU" id="Gp5-Ib-rYc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="9Tt-Ec-9nU"/>
+                    <navigationItem key="navigationItem" title="设置" id="9Tt-Ec-9nU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgt-lq-ojz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
